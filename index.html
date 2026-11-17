@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang ="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>LifeSync - Productivity Dashboard</title>
+
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+            
+        <aside class="sidebar">
+            <h2 class="logo">LifeSync<span>.</span></h2>
+
+            <p class="menu-title">WORKSPACE</p>
+
+            <nav class="navigation">
+
+                <a href="#" class="active"> Dashboard</a>
+                <a href="#tasks">My Taks</a>
+                <a href="#mygoals">My Goals</a>
+                <a href="#analytics"> Analytics</a>
+
+            </nav>
+
+            <div class="sidebar-footer">
+
+                   <p>Make every day count.</p>
+
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="topbar">
+                <div>
+                    <p class="eyebrow">YOUR PERSONAL WORKSPACE</p>
+
+                    <h1>Dashboard</h1>
+                    <p class="subtitle">Plan your day. Focus on what matters.</p>
+
+                </div>
+
+
+                <button id="themeToggle">Dark Mode</button>
+
+            </header>
+
+        <section class="stats-grid">
+
+    <div class="stat-card">
+        <p>Total Tasks</p>
+        <h2 id="totalTasks">0</h2>
+        <span>All your tasks</span>
+    </div>
+
+    <div class="stat-card">
+        <p>Completed</p>
+        <h2 id="completedTasks">0</h2>
+        <span>Tasks completed</span>
+    </div>
+
+    <div class="stat-card">
+        <p>Pending</p>
+        <h2 id="pendingTasks">0</h2>
+        <span>Tasks remaining</span>
+    </div>
+
+    <div class="stat-card">
+        <p>productivity</p>
+        <h2 id="productivity">0%</h2>
+        <span>Your completion rate</span>
+    </div>
+
+</section>
+
+<section class="content-card" id="tasks">
+    <div class="section-heading">
+        <div>
+            <h2>My Tasks</h2>
+            <p>Organize your day and stay productive.</p>
+
+        </div>
+    </div>
+
+    <form id="taskForm">
+        <input
+
+        type="text"
+        id="taskInput"
+        placeholder="What do you need to do?"
+        required
+        >
+
+
+        <select id="taskPriority" arial-lable="Task priority">
+            <option value="Medium">Medium Priority</option>
+            <option value="High">High Priority</option>
+            <option value="Low">Low Priority</option>
+        </select>
+
+        <button type="submit" class="add-button">+ Add Tasks</button>
+
+    </form>
+
+    <div class="task-toolbar">
+        <h3>Your Taks List</h3>
+
+
+        <select id="taskFilter" arial-label="Filter tasks">
+
+            <option value="all"> All Tasks</option>
+            <option value="pending">Pending</option>
+            <option value="completed">Completed</option>
+
+        </select>
+    </div>
+    <div id="taskList">
+        <div class="empty-state">
+            <h3>Your day starts here!</h3>
+            <p>Add your first task to get started.</p>
+
+        </div>
+    </div>
+</section>
+<!------ My Goals Section---->
+<section class="content-card" id="myGoals">
+    <div class="section-heading">
+        <div>
+            <h2>My Goals</h2>
+            <p>Set your goals and achieve more every day.</p>
+        </div>
+    </div><form id="goalForm">
+        <input
+        type="text"
+        id="goalInput"
+        placeholder="Enter your goal....."
+        required
+        >
+        <button type="submit" class="add-button">
+            +Add Goal
+        </button>
+    </form>
+    <div id="goalList"></div>
+</section>
+<section class="content-card"  id="goals">
+
+
+    <section class="content-card" id="analytics">
+        <div class="section-heading">
+            <div>
+                <h2> Analytics</h2>
+                <p>Track your productivity and progress.</p>
+
+            </div>
+        </div>
+        <div class="analytics-cards">
+            <div class="analytics-card">
+                <h3>Total tasks</h3>
+                <p id="analyticsTotal">0</p>
+
+            </div>
+            <div class="analytics-card">
+                <h3>Complete Tasks</h3>
+                <p id="analyticsCompleted">0</p>
+            </div>
+<div class="analytics-card">
+    <h3>pending Tasks</h3>
+    <p id="analyticsPending">0</p>
+   </div>
+        </div>
+    </section>
+    <h2>Daily Progress</h2>
+    <p class="subtitle">Small steps lead to big achievements.</p>
+
+
+    <div class="Progress-info">
+        <span>Tasks completed</span>
+        <strong id="progressPercentage">0%</strong>
+
+    </div>
+
+    <div class="progress-track">
+        <div id="progressBar"></div>
+    </div>
+</section>
+
+<footer>
+    <p> 2026 LifeSync. Designed for a productive life.</p>
+
+</footer>
+
+        </main>
+<script src="script.js"></script>
+
+    </body>
+</html>
